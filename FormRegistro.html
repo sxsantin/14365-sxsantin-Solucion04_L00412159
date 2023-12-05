@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Formulario de Entrega</title>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Formulario de Entrega</h1>
+
+    <form action="#" method="post">
+
+      <label for="callePrincipal">Calle Principal:</label>
+      <input type="text" id="callePrincipal" name="callePrincipal" required>
+
+      <label for="transversal">Transversal:</label>
+      <input type="text" id="transversal" name="transversal" required>
+        
+        <input type="checkbox" id="entregaPropietario" name="entregaPropietario" checked onclick="toggleEnvioDatos()">
+        <label for="entregaPropietario">Entrega al propietario</label>
+        <input type="checkbox" id="entregaTerceros" name="entregaTerceros" onclick="toggleFormularioTerceros(); toggleEnvioDatos()">
+        <label for="entregaTerceros">Entrega a terceros</label>
+
+        <label for="cantones">Cantón:</label>
+        <select id="cantones" name="cantones">
+          <option value="Mejia">Mejía</option>
+          <option value="Ruminahui">Rumiñahui</option>
+          <option value="Quito">Quito</option>
+          <option value="PedroMoncayo">Pedro Moncayo</option>
+          <option value="Cayambe">Cayambe</option>
+          <option value="SanMiguelBancos">San Miguel de los Bancos</option>
+          <option value="PuertoQuito">Puerto Quito</option>
+          <option value="PedroVicenteMaldonado">Pedro Vicente Maldonado</option>
+        </select>  
+
+      <div id="formularioTerceros" class="hidden">
+        <h2>INFORMACIÓN CONFIDENCIAL</h2>
+        <label for="codigoPostal">Código Postal:</label>
+        <input type="text" id="codigoPostal" name="codigoPostal">
+
+        <label for="referencia">Referencia de Dirección:</label>
+        <input type="text" id="referencia" name="referencia">
+        <br>
+        <button type="submit" id="Guardardatos">Guardar</button>
+        <br>
+      </div>
+      <br>
+      <button type="submit" id="enviarDatos" disabled>Enviar Datos</button>
+
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

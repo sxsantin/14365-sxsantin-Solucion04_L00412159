@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles1.css">
+  <title>Formulario de Producto</title>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Datos Básicos</h2>
+
+    <form id="formularioProducto" action="#" method="post">
+      <label for="nombreProducto">Nombre de Producto:</label>
+      <input type="text" id="nombreProducto" name="nombreProducto" required>
+
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+      <label for="foto">Foto:</label>
+      <input type="file" id="foto" name="foto" accept="image/*">
+
+      <label>
+        <input type="checkbox" id="infoConfidencial" name="infoConfidencial">
+        Añadir Información Confidencial
+      </label>
+
+      <div id="formularioConfidencial" class="hidden">
+        <h2>Datos Economicos</h2>
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" step="0.0" required>
+        <br>
+        <br>
+        <label for="impuesto">Impuesto:</label>
+        <select id="impuesto" name="impuesto">
+          <option value="4">4%</option>
+          <option value="6">6%</option>
+          <option value="8">8%</option>
+          <option value="12">12%</option>
+        </select>
+        <br>
+        <br>
+        <label for="promocion">Promoción:</label>
+        <br>
+        <select id="promocion" name="promocion">
+          <option value="ninguno">Ninguno</option>
+          <option value="transporteGratis">Transporte Gratuito</option>
+          <option value="descuento5">Descuento 5%</option>
+        </select>
+      </div>
+      <br>
+      <button type="button" onclick="guardarCambios()">Guardar Cambios</button>
+      <br>
+      <button type="button" onclick="borrarDatos()">Borrar Datos</button>
+    </form>
+  </div>
+
+  <script src="script1.js"></script>
+</body>
+</html>

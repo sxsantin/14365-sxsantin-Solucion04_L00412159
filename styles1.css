@@ -1,0 +1,54 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-top: 10px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Utilizamos flexbox para alinear los campos de Precio e Impuesto */
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Ajustamos el ancho de los campos */
+  .form-row label[for="precio"], .form-row label[for="impuesto"] {
+    width: 48%;
+  }
+  
+  .form-row input[type="number"], .form-row select {
+    width: 48%;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
